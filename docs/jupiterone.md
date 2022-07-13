@@ -1,4 +1,4 @@
-# Integration with JupiterOne
+# Asana
 
 ## Asana + JupiterOne Integration Benefits
 
