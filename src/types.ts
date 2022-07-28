@@ -20,7 +20,7 @@ export interface User {
 export interface Project {
   gid: string;
   name: string;
-  owner: Pick<User, 'gid' | 'resource_type'>;
+  owner: Pick<User, 'gid' | 'resource_type'> | null;
   team: Pick<Team, 'gid' | 'resource_type'>;
   public: boolean;
   created_at: string;
