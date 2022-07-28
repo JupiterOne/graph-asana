@@ -19,7 +19,7 @@ export function createProjectEntity(project: Project): Entity {
         _type: Entities.PROJECT._type,
         _class: Entities.PROJECT._class,
         id: project.gid,
-        ownerId: project.owner.gid,
+        ownerId: project.owner?.gid,
         teamId: project.team.gid,
         public: project.public,
         createdAt: project.created_at,
