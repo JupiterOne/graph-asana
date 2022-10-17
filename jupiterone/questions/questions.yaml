@@ -1,15 +1,17 @@
 ---
-sourceId: managed:template
+sourceId: managed:asana
 integrationDefinitionId: '${integration_definition_id}'
-questions: []
-  # - id: integration-question-template-replace-me
-  #   title: What kinds of questions will this integration support?
-  #   description:
-  #     TODO Every integration should contribute questions! Please be carefule
-  #     to replace this before deploying the integration to JupiterOne.
-  #   queries:
-  #     - name: good
-  #       query: |
-  #         find * with _integrationDefinitionId = '${integration_definition_id}'
-  #   tags:
-  #     - template
+questions: 
+- id: managed-question-asana-teams-and-no-team-members
+  title: Which Asana teams are without active team members?
+  description: Returns a list of Asana teams that do not have active team members.
+  queries:
+  - name: Asana Teams That Lack Active Team Members
+    resultsAre: BAD
+    query: |
+      FIND asana_team 
+        THAT ASSIGNED asana_project
+        THAT !HAS asana_user WITH active = true
+  tags:
+  - asana
+  - teams
