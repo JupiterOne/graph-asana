@@ -6,7 +6,7 @@ questions:
   title: Which Asana teams have no active team members?
   description: Returns a list of Asana teams that do not have active team members.
   queries:
-  - name: Asana Teams That Lack Active Team Members
+  - name: Asana Teams Without Any Members
     resultsAre: INFORMATIVE
     query: |
       FIND asana_team !HAS asana_user
