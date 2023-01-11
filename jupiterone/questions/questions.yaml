@@ -9,9 +9,7 @@ questions:
   - name: Asana Teams That Lack Active Team Members
     resultsAre: INFORMATIVE
     query: |
-      FIND asana_team 
-        THAT ASSIGNED asana_project
-        THAT !HAS asana_user WITH active = true
+      FIND asana_team !HAS asana_user
   tags:
   - asana
   - teams
