@@ -3,7 +3,7 @@ sourceId: managed:asana
 integrationDefinitionId: '${integration_definition_id}'
 questions: 
 - id: managed-question-asana-teams-and-no-team-members
-  title: Which Asana teams are without active team members?
+  title: Which Asana teams have no active team members?
   description: Returns a list of Asana teams that do not have active team members.
   queries:
   - name: Asana Teams That Lack Active Team Members
