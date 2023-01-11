@@ -7,7 +7,7 @@ questions:
   description: Returns a list of Asana teams that do not have active team members.
   queries:
   - name: Asana Teams That Lack Active Team Members
-    resultsAre: BAD
+    resultsAre: INFORMATIVE
     query: |
       FIND asana_team 
         THAT ASSIGNED asana_project
